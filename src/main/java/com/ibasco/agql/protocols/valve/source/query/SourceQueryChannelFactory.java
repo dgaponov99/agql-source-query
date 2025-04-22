@@ -22,6 +22,7 @@ import com.ibasco.agql.protocols.valve.source.query.challenge.SourceQueryChallen
 import com.ibasco.agql.protocols.valve.source.query.challenge.SourceQueryChallengeEncoder;
 import com.ibasco.agql.protocols.valve.source.query.common.handlers.SourceQueryPacketDecoder;
 import com.ibasco.agql.protocols.valve.source.query.common.handlers.SourceQuerySplitPacketAssembler;
+import com.ibasco.agql.protocols.valve.source.query.info.GoldSourceQueryInfoDecoder;
 import com.ibasco.agql.protocols.valve.source.query.info.SourceQueryInfoDecoder;
 import com.ibasco.agql.protocols.valve.source.query.info.SourceQueryInfoEncoder;
 import com.ibasco.agql.protocols.valve.source.query.players.SourceQueryPlayersDecoder;
@@ -61,6 +62,7 @@ public class SourceQueryChannelFactory extends NettyChannelFactoryInitializer {
         handlers.addLast(new SourceQuerySplitPacketAssembler());
         handlers.addLast(new SourceQueryChallengeDecoder());
         handlers.addLast(new SourceQueryInfoDecoder());
+        handlers.addLast(new GoldSourceQueryInfoDecoder());
         handlers.addLast(new SourceQueryPlayersDecoder());
         handlers.addLast(new SourceQueryRulesDecoder());
     }

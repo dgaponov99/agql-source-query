@@ -63,7 +63,7 @@ abstract public class SourceQueryAuthDecoder<T extends SourceQueryAuthRequest> e
     @Override
     protected final boolean acceptPacket(SourceQueryMessage msg) {
         //some servers throw an empty info response for any type of requests (info, players and rules) so as long as we get a matching request AND the header and packet is empty, then we accept it
-        boolean emptyInfoResponse = msg.hasHeader(SourceQuery.SOURCE_QUERY_INFO_RES) && msg.getPacket().content().readableBytes() == 0;
+        boolean emptyInfoResponse = (msg.hasHeader(SourceQuery.SOURCE_QUERY_INFO_RES) || msg.hasHeader(SourceQuery.GOLD_SOURCE_QUERY_INFO_RES)) && msg.getPacket().content().readableBytes() == 0;
         boolean accept = msg.hasRequest(requestClass) && (emptyInfoResponse || msg.hasHeader(responseHeader) || msg.hasHeader(SourceQuery.SOURCE_QUERY_CHALLENGE_RES));
         if (!accept)
             debug("Rejected message '{}' with response header '{}' (Expected request: {}, Expected response header: {})", msg.getRequest(), msg.getPacket().getHeader(), requestClass, responseHeader);

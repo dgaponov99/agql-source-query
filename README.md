@@ -6,6 +6,7 @@ This is a minimal, standalone fork of the [Valve Source Query](https://github.co
 
 - Extracted only the `protocols/valve/source/query` module.
 - Refactored for standalone usage.
+- Add a decoder for the [GoldSrc](https://developer.valvesoftware.com/wiki/GoldSrc) response of the [A2S_INFO](https://developer.valvesoftware.com/wiki/Server_queries) query
 
 ## License
 

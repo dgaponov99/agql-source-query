@@ -49,6 +49,9 @@ public final class SourceQuery {
     /** Constant <code>SOURCE_QUERY_INFO_RES=0x49</code> */
     public static final int SOURCE_QUERY_INFO_RES = 0x49;
 
+    /** Constant <code>GOLD_SOURCE_QUERY_INFO_RES=0x6d</code> */
+    public static final int GOLD_SOURCE_QUERY_INFO_RES = 0x6d;
+
     /** Constant <code>SOURCE_QUERY_PLAYER_REQ=0x55</code> */
     public static final int SOURCE_QUERY_PLAYER_REQ = 0x55;
 
@@ -139,6 +142,7 @@ public final class SourceQuery {
     public static boolean isValidResponse(int header) {
         switch (header) {
             case SOURCE_QUERY_INFO_RES:
+            case GOLD_SOURCE_QUERY_INFO_RES:
             case SOURCE_QUERY_PLAYER_RES:
             case SOURCE_QUERY_CHALLENGE_RES:
             case SOURCE_QUERY_RULES_RES:
