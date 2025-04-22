@@ -30,6 +30,14 @@
     <description>An implementation of the Valve Source Query Protocol (A2S_INFO, A2S_PLAYER and A2S_RULES)</description>
     <packaging>jar</packaging>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>Github</name>
+            <url>https://maven.pkg.github.com/dgaponov99/agql-source-query</url>
+        </repository>
+    </distributionManagement>
+
     <dependencies>
         <dependency>
             <groupId>com.ibasco.agql</groupId>
