@@ -1,0 +1,12 @@
+target/
+/.idea/
+*.log
+/docs/*.~vsd
+logs/
+out/
+*.iml
+/examples/src/main/resources/auth.json
+example.properties
+/gh-pages/
+.flattened-pom.xml
+/assembly/dependency-reduced-pom.xml

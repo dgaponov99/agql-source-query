@@ -21,10 +21,10 @@
     <parent>
         <groupId>com.ibasco.agql</groupId>
         <artifactId>async-gamequery-lib</artifactId>
-        <version>${revision}${sha1}${changelist}</version>
-        <relativePath>../../../../pom.xml</relativePath>
+        <version>1.2.2</version>
     </parent>
 
+    <groupId>com.github.dgaponov99</groupId>
     <artifactId>agql-source-query</artifactId>
     <name>AGQL - Valve - Source Query</name>
     <description>An implementation of the Valve Source Query Protocol (A2S_INFO, A2S_PLAYER and A2S_RULES)</description>
