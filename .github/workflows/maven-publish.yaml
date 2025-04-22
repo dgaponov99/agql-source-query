@@ -24,6 +24,6 @@ jobs:
           distribution: 'zulu'
 
       - name: Publish package
-        run: mvn deploy -P release
+        run: mvn deploy -P snapshot
         env:
           GITHUB_TOKEN: ${{ github.token }}
